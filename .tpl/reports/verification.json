@@ -1,0 +1,86 @@
+{
+  "$schema": "../schemas/verification.schema.json",
+  "format": "git-template-verification",
+  "formatVersion": "0.2.0",
+  "status": "passed",
+  "checkedAt": "2026-10-25T11:33:47.356Z",
+  "sourceCommit": "a882afdf761d33979352b3fb2a038c2f0c5a5cfb",
+  "sourceDigest": "6f253ba1de98642ba1f824f936cc65f68ae6386d52f80fcc6605bb248af045b2",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.16.0",
+    "packageManager": "pnpm@9.15.4",
+    "cleanDirectory": true,
+    "localGitClone": true
+  },
+  "checks": [
+    {
+      "id": "typecheck",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-25T11:33:20.327Z",
+      "finishedAt": "2026-10-25T11:33:23.053Z"
+    },
+    {
+      "id": "lint",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-25T11:33:23.054Z",
+      "finishedAt": "2026-10-25T11:33:25.849Z"
+    },
+    {
+      "id": "test",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-25T11:33:25.850Z",
+      "finishedAt": "2026-10-25T11:33:26.576Z"
+    },
+    {
+      "id": "build",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-25T11:33:26.577Z",
+      "finishedAt": "2026-10-25T11:33:46.504Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "web",
+      "status": "passed",
+      "stopped": true,
+      "checkedAt": "2026-10-25T11:33:47.356Z"
+    }
+  ],
+  "limitations": [
+    "应用命令及24条双语路由通过不代表完整原站三端亚秒级逐帧对照已通过。",
+    "三端水波持续轨迹、文字悬停与系统减少动态设置的真实操作矩阵尚未完成。",
+    "参考字体与标题字号按项目中文规范调整，导航首帧可见以避免切页闪烁；新增内页为原创同风格内容。",
+    "截图在标准CSS视口采集，接口返回1425×990、819×1159、375×812，按真实尺寸登记且未放大。",
+    "参考设计与素材商业再分发权未完整核实，保持未上架。"
+  ]
+}
