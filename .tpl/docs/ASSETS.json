@@ -1,0 +1,30 @@
+{
+  "reference": "https://jiro.build/components/header/mindful-living-and-slow-lifestyle-header-zenpanda",
+  "assets": [
+    {
+      "file": "public/templates/zenpanda/panda-boat.mp4",
+      "source": "https://cdn.jiro.build/Jahid/Test/Panda%20catching%20fish%20on%20boat.mp4",
+      "license": "第三方视频，商业再分发许可未核实"
+    },
+    {
+      "file": "public/templates/zenpanda/forest.jpg",
+      "source": "https://images.unsplash.com/photo-1448375240586-882707db888b",
+      "license": "Unsplash License，需按实际用途核实"
+    },
+    {
+      "file": "public/templates/zenpanda/mountain.jpg",
+      "source": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+      "license": "Unsplash License，需按实际用途核实"
+    },
+    {
+      "file": "public/templates/zenpanda/tea.jpg",
+      "source": "https://images.unsplash.com/photo-1544787219-7f47ccb76574",
+      "license": "Unsplash License，需按实际用途核实"
+    },
+    {
+      "file": "public/templates/zenpanda/fonts",
+      "source": "MiSans 与 Google Fonts Poppins，保留字体许可",
+      "license": "各自字体许可"
+    }
+  ]
+}

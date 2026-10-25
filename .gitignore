@@ -1,0 +1,20 @@
+node_modules
+.next*
+.work
+*.tsbuildinfo
+.env*
+!.env.example
+
+# Git 模板本地生成物
+node_modules/
+.next/
+.work/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+next-env.d.ts

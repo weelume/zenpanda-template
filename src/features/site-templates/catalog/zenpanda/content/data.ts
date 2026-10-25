@@ -1,0 +1,31 @@
+import type { Bilingual } from '../config/brand';
+export const text = (zh: string, en: string): Bilingual => ({ zh, en });
+export const nav = [{ slug: '', label: text('首页', 'Home') }, { slug: 'mindfulness', label: text('正念练习', 'Mindfulness') }, { slug: 'nature', label: text('走进自然', 'Nature') }, { slug: 'journal', label: text('生活手记', 'Journal') }, { slug: 'community', label: text('慢生活社区', 'Community') }];
+export const rituals = [
+    { id: 'breathe', number: '01', title: text('给呼吸一分钟', 'A minute to breathe'), description: text('放下手中的事，觉察空气轻轻进入身体。无需改变，只要看见。', 'Set everything down and notice the air moving through you. There is nothing to fix. Just notice.'), duration: text('1 分钟 · 随时开始', '1 minute · Anytime'), image: 'forest.jpg' },
+    { id: 'walk', number: '02', title: text('走一段没有目的的路', 'Walk without a destination'), description: text('把耳机收起来，听听风和树叶。让脚步比昨天慢一点。', 'Put your headphones away. Listen to the wind and leaves. Let your footsteps find a gentler pace.'), duration: text('10 分钟 · 户外', '10 minutes · Outdoors'), image: 'mountain.jpg' },
+    { id: 'tea', number: '03', title: text('认真喝一杯茶', 'Be here for your tea'), description: text('感受杯壁的温度，闻一闻茶香。把这一小段时间，还给自己。', 'Feel the warmth of the cup and the fragrance of tea. Let this small moment belong to you.'), duration: text('5 分钟 · 日常', '5 minutes · Daily'), image: 'tea.jpg' }
+];
+export const articles = [
+    { slug: 'a-slower-morning', category: text('日常仪式', 'Daily rituals'), title: text('让清晨从一件小事开始', 'A softer way to begin your morning'), intro: text('不用重新设计整个人生，先给醒来后的十分钟留一点空白。', 'You do not need to redesign your life. Begin by leaving a little room in the first ten minutes.'), image: 'tea.jpg', date: '2026-10-12', minutes: 4, sections: [
+            { title: text('先别急着连接世界', 'Before you connect to the world'), body: text('醒来后，把手机暂时放在触手可及之外。打开窗帘，看看今天的光。喝一杯水，感受脚底与地面的接触。这不是一张需要完成的清单，只是邀请自己回到当下。', 'Leave your phone just beyond reach. Open the curtains and notice the light. Drink a glass of water and feel your feet on the floor. This is an invitation, not a checklist.') },
+            { title: text('选一个可以重复的小仪式', 'Choose one small, repeatable ritual'), body: text('一杯茶、三次自然的呼吸，或在窗边坐一会儿。选择一件你愿意重复的事，让它成为清晨熟悉的停靠点。哪怕今天只停留一分钟，也已经足够。', 'A cup of tea, three natural breaths, or a moment by the window. Choose something you would like to return to. Even one quiet minute can be enough.') },
+            { title: text('允许每天有所不同', 'Let each day be different'), body: text('有些清晨安静，有些清晨匆忙。不需要因为错过仪式责备自己。明天仍然可以重新开始，慢生活也包含接纳生活原本的样子。', 'Some mornings are quiet and others are hurried. Missing a ritual is no reason to be hard on yourself. Tomorrow is another beginning. A slower life makes room for life as it is.') }
+        ] },
+    { slug: 'listen-to-the-trees', category: text('自然时刻', 'Time in nature'), title: text('把注意力交给一棵树', 'Spend a little time with a tree'), intro: text('不用去很远的地方，街角也藏着值得停留的风景。', 'You do not have to travel far. There is something worth noticing just around the corner.'), image: 'forest.jpg', date: '2026-10-08', minutes: 3, sections: [
+            { title: text('从熟悉的路开始', 'Begin on a familiar path'), body: text('在每天经过的路上选一棵树。今天看看叶子的颜色，明天观察树影的位置。当我们开始留意，熟悉的路也会带来新的发现。', 'Choose a tree on a route you already walk. Notice its leaves today and the shape of its shadow tomorrow. A familiar path changes when you begin to pay attention.') },
+            { title: text('把感官打开', 'Let your senses lead'), body: text('听树叶摩擦的声音，感受风吹过皮肤，看看树皮的纹理。保持安全距离，不采摘、不打扰，让相遇足够轻。', 'Listen to the leaves and feel the wind on your skin. Notice the texture of the bark. Keep a safe distance, leave living things undisturbed, and let your visit be gentle.') },
+            { title: text('带走一个小小的发现', 'Take one observation home'), body: text('不一定要拍照。记住一种颜色或一个声音，把它写进今天的手记。自然不要求你表现得更好，它只邀请你在这里待一会儿。', 'You do not have to take a photograph. Remember one colour or sound and write it down later. Nature asks no performance of you, only a little attention.') }
+        ] },
+    { slug: 'room-for-less', category: text('简单生活', 'Living simply'), title: text('留一点空白给真正喜欢的事', 'Make room for what matters'), intro: text('少安排一件事，可能就多了一次好好生活的机会。', 'One fewer commitment can make space for a more attentive day.'), image: 'mountain.jpg', date: '2026-10-02', minutes: 5, sections: [
+            { title: text('看看什么正在占据时间', 'Notice what fills your time'), body: text('回想这一周，哪些安排让你感到充实，哪些只是出于习惯？不必立刻做出改变，先诚实地看见自己的感受。', 'Think about the week. Which commitments felt meaningful and which happened out of habit? You do not need to change them immediately. Begin by noticing honestly.') },
+            { title: text('空白也可以是一种安排', 'Leave space in the calendar'), body: text('试着给某个下午留出半小时，不指定用途。散步、发呆，或什么也不做。休息并不需要用生产力来证明价值。', 'Leave half an hour without a plan. Walk, daydream, or do nothing at all. Rest does not need to justify itself through productivity.') },
+            { title: text('从一个温和的选择开始', 'Begin with a gentle choice'), body: text('整理一个抽屉，取消一项不再重要的提醒，或为喜欢的书留出一个晚上。简单生活没有统一的标准，适合自己的节奏才值得保留。', 'Clear one drawer, turn off an unnecessary reminder, or keep an evening for a book. There is no universal standard for a simple life. Keep the rhythm that fits you.') }
+        ] }
+];
+export const faqs = [
+    { q: text('从哪里开始练习？', 'Where should I begin?'), a: text('从一分钟自然呼吸开始即可。无需设备，也不必追求某种特别的感受。练习页提供可暂停的呼吸节奏引导。', 'Start with a minute of natural breathing. No equipment or special feeling is required. The practice page includes a breathing guide you can pause.') },
+    { q: text('每天都要完成所有练习吗？', 'Do I need to do every practice daily?'), a: text('不需要。选择一种适合当下的小习惯，按自己的节奏尝试。这里没有打卡成绩，也没有必须达到的目标。', 'No. Choose one small habit that fits your day. There are no streaks to protect or targets to meet.') },
+    { q: text('这里提供医疗或心理治疗服务吗？', 'Is this a medical or therapy service?'), a: text('这里是慢生活灵感与日常练习演示，不提供诊断或治疗。练习中如感到不适，请停止，并按需要寻求专业帮助。', 'This is a demonstration of everyday practices and mindful living ideas, not diagnosis or treatment. Stop if a practice feels uncomfortable and seek professional support when needed.') },
+    { q: text('联系和订阅会发送信息吗？', 'Will the forms send my information?'), a: text('不会。当前模板仅在浏览器中校验输入，不发送、不保存，也不会创建账户或订阅。', 'No. This template validates input in the browser only. It does not send or save data, create accounts, or subscribe you.') }
+];

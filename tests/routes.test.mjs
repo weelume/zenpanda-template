@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync,existsSync} from 'node:fs';
+const meta=JSON.parse(readFileSync('.tpl/template.json','utf8'));
+test('12个独立页面与24条双语路径均有明确注册',()=>{const pages=meta.surfaces[0].pages;assert.equal(pages.length,12);assert.equal(new Set(pages.map(p=>p.slug)).size,12);for(const p of pages){assert.ok(p.title);assert.ok(p.localizedTitles.en);}assert.deepEqual(meta.surfaces[0].locales,['zh','en']);});
+test('运行素材存在且字体声明隔离',()=>{for(const name of ['panda-boat.mp4','forest.jpg','mountain.jpg','tea.jpg'])assert.ok(existsSync('public/templates/zenpanda/'+name));for(const face of ['Regular','Bold']){let css=readFileSync('public/templates/zenpanda/fonts/misans/MiSans-'+face+'.css','utf8');assert.ok(css.includes('ZenpandaMiSans'));assert.ok(!css.includes('Spycat'));}});
+test('演示表单无持久化与外发调用',()=>{let source=readFileSync('src/features/site-templates/catalog/zenpanda/components/Forms.tsx','utf8');assert.doesNotMatch(source,/fetch\(|localStorage|sessionStorage|XMLHttpRequest/);assert.match(source,/sent:\s*false,\s*saved:\s*false/);});

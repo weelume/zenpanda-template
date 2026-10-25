@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:git-template:template:0.2.0",
+  "title": "Git 模板市场展示元数据",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "format",
+    "formatVersion",
+    "id",
+    "version",
+    "name",
+    "gitUrl",
+    "sceneId",
+    "listed",
+    "tags",
+    "summary",
+    "accentColor",
+    "cover",
+    "screenshots",
+    "surfaces",
+    "license"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "./schemas/template.schema.json"
+    },
+    "format": {
+      "const": "git-template"
+    },
+    "formatVersion": {
+      "const": "0.2.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "localizedNames": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sceneId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "listed": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "localizedSummaries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "accentColor": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "cover": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "screenshots": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "src",
+          "alt",
+          "device",
+          "width",
+          "height"
+        ],
+        "properties": {
+          "src": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "alt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "device": {
+            "enum": [
+              "desktop",
+              "tablet",
+              "mobile"
+            ]
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20000
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20000
+          },
+          "surfaceId": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "pageSlug": {
+            "type": "string",
+            "pattern": "^(?:[a-z0-9]+(?:[-/][a-z0-9]+)*)?$"
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "platform",
+          "locales",
+          "pages"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "platform": {
+            "enum": [
+              "pc",
+              "miniprogram",
+              "mobile"
+            ]
+          },
+          "locales": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "pages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "slug",
+                "title"
+              ],
+              "properties": {
+                "slug": {
+                  "type": "string",
+                  "pattern": "^(?:[a-z0-9]+(?:[-/][a-z0-9]+)*)?$"
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "localizedTitles": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "stack": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "file",
+        "summary",
+        "redistributionAllowed"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "open-source",
+            "commercial",
+            "restricted",
+            "unlicensed"
+          ]
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "redistributionAllowed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "gitUrl": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "description": "模板 Git 仓库地址，必填；支持 HTTP(S)、SSH 或 user@host:path，不填写本机目录、凭据或查询参数。",
+      "pattern": "^(?:https?://|ssh://|[A-Za-z0-9._-]+@[A-Za-z0-9.-]+:)[^\\s]+$"
+    }
+  }
+}

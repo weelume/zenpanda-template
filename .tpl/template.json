@@ -1,0 +1,243 @@
+{
+  "$schema": "./schemas/template.schema.json",
+  "format": "git-template",
+  "formatVersion": "0.2.0",
+  "id": "zenpanda",
+  "version": "1.0.0",
+  "gitUrl": "https://github.com/weelume/zenpanda-template",
+  "name": "Zenpanda · 禅意慢生活",
+  "localizedNames": {
+    "en": "Zenpanda · Mindful living"
+  },
+  "summary": "互动水面、熊猫泛舟视频与逐字标题组成的双语慢生活网站。",
+  "sceneId": "corporate-site",
+  "listed": false,
+  "tags": [
+    "慢生活",
+    "互动水波",
+    "双语",
+    "PC / iPad / H5"
+  ],
+  "stack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Framer Motion",
+    "WebGL"
+  ],
+  "accentColor": "#398b93",
+  "cover": "assets/desktop-home.webp",
+  "screenshots": [
+    {
+      "src": "assets/desktop-home.webp",
+      "alt": "Zenpanda desktop home",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/desktop-mindfulness.webp",
+      "alt": "Zenpanda desktop mindfulness",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": "mindfulness"
+    },
+    {
+      "src": "assets/desktop-journal.webp",
+      "alt": "Zenpanda desktop journal",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": "journal"
+    },
+    {
+      "src": "assets/desktop-contact.webp",
+      "alt": "Zenpanda desktop contact",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": "contact"
+    },
+    {
+      "src": "assets/tablet-home.webp",
+      "alt": "Zenpanda tablet home",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/tablet-mindfulness.webp",
+      "alt": "Zenpanda tablet mindfulness",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": "mindfulness"
+    },
+    {
+      "src": "assets/tablet-journal.webp",
+      "alt": "Zenpanda tablet journal",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": "journal"
+    },
+    {
+      "src": "assets/tablet-contact.webp",
+      "alt": "Zenpanda tablet contact",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": "contact"
+    },
+    {
+      "src": "assets/mobile-home.webp",
+      "alt": "Zenpanda mobile home",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/mobile-mindfulness.webp",
+      "alt": "Zenpanda mobile mindfulness",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": "mindfulness"
+    },
+    {
+      "src": "assets/mobile-journal.webp",
+      "alt": "Zenpanda mobile journal",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": "journal"
+    },
+    {
+      "src": "assets/mobile-contact.webp",
+      "alt": "Zenpanda mobile contact",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": "contact"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "site",
+      "name": "慢生活官网",
+      "platform": "pc",
+      "locales": [
+        "zh",
+        "en"
+      ],
+      "pages": [
+        {
+          "slug": "",
+          "title": "首页",
+          "localizedTitles": {
+            "en": "Home"
+          }
+        },
+        {
+          "slug": "about",
+          "title": "我们的理念",
+          "localizedTitles": {
+            "en": "About"
+          }
+        },
+        {
+          "slug": "mindfulness",
+          "title": "正念练习",
+          "localizedTitles": {
+            "en": "Mindfulness"
+          }
+        },
+        {
+          "slug": "nature",
+          "title": "走进自然",
+          "localizedTitles": {
+            "en": "Nature"
+          }
+        },
+        {
+          "slug": "journal",
+          "title": "生活手记",
+          "localizedTitles": {
+            "en": "Journal"
+          }
+        },
+        {
+          "slug": "journal/a-slower-morning",
+          "title": "慢慢开始清晨",
+          "localizedTitles": {
+            "en": "A slower morning"
+          }
+        },
+        {
+          "slug": "journal/listen-to-the-trees",
+          "title": "听见树的声音",
+          "localizedTitles": {
+            "en": "Listen to the trees"
+          }
+        },
+        {
+          "slug": "journal/room-for-less",
+          "title": "给生活留白",
+          "localizedTitles": {
+            "en": "Room for less"
+          }
+        },
+        {
+          "slug": "community",
+          "title": "慢生活社区",
+          "localizedTitles": {
+            "en": "Community"
+          }
+        },
+        {
+          "slug": "contact",
+          "title": "联系",
+          "localizedTitles": {
+            "en": "Contact"
+          }
+        },
+        {
+          "slug": "privacy",
+          "title": "隐私政策",
+          "localizedTitles": {
+            "en": "Privacy"
+          }
+        },
+        {
+          "slug": "terms",
+          "title": "使用条款",
+          "localizedTitles": {
+            "en": "Terms"
+          }
+        }
+      ]
+    }
+  ],
+  "license": {
+    "type": "restricted",
+    "file": "docs/LICENSE.md",
+    "summary": "参考设计、视频及图形的商业再分发权未核实；源码、素材与工具许可分开。",
+    "redistributionAllowed": false
+  }
+}

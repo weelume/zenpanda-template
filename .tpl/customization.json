@@ -1,0 +1,112 @@
+{
+  "format": "git-template-customization",
+  "formatVersion": "0.2.0",
+  "entries": [
+    {
+      "id": "brand",
+      "title": "品牌",
+      "description": "修改品牌后检查双语与相关页面",
+      "files": [
+        {
+          "path": "src/features/site-templates/catalog/zenpanda/config/brand.ts",
+          "kind": "file",
+          "purpose": "品牌"
+        }
+      ],
+      "constraints": [
+        "保持双语一致，素材本地托管，不添加未批准依赖。"
+      ],
+      "checks": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "content",
+      "title": "双语内容",
+      "description": "修改双语内容后检查双语与相关页面",
+      "files": [
+        {
+          "path": "src/features/site-templates/catalog/zenpanda/content/data.ts",
+          "kind": "file",
+          "purpose": "双语内容"
+        }
+      ],
+      "constraints": [
+        "保持双语一致，素材本地托管，不添加未批准依赖。"
+      ],
+      "checks": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "theme",
+      "title": "主题与响应式",
+      "description": "修改主题与响应式后检查双语与相关页面",
+      "files": [
+        {
+          "path": "src/features/site-templates/catalog/zenpanda/theme.css",
+          "kind": "file",
+          "purpose": "主题与响应式"
+        }
+      ],
+      "constraints": [
+        "保持双语一致，素材本地托管，不添加未批准依赖。"
+      ],
+      "checks": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "motion",
+      "title": "视频与水波",
+      "description": "修改视频与水波后检查双语与相关页面",
+      "files": [
+        {
+          "path": "src/features/site-templates/catalog/zenpanda/components/WaterScene.tsx",
+          "kind": "file",
+          "purpose": "视频与水波"
+        }
+      ],
+      "constraints": [
+        "保持双语一致，素材本地托管，不添加未批准依赖。"
+      ],
+      "checks": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "pages",
+      "title": "页面注册",
+      "description": "修改页面注册后检查双语与相关页面",
+      "files": [
+        {
+          "path": "src/features/site-templates/catalog/zenpanda/meta.ts",
+          "kind": "file",
+          "purpose": "页面注册"
+        }
+      ],
+      "constraints": [
+        "保持双语一致，素材本地托管，不添加未批准依赖。"
+      ],
+      "checks": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ]
+    }
+  ],
+  "$schema": "./schemas/customization.schema.json"
+}

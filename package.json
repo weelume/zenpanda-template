@@ -1,0 +1,50 @@
+{
+  "name": "zenpanda-template",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "node scripts/next.mjs dev",
+    "build": "node scripts/next.mjs build",
+    "start": "node scripts/next.mjs start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "node --test tests/*.test.mjs",
+    "bundle": "node scripts/bundle.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "24.12.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.4",
+    "eslint": "9.39.4",
+    "eslint-config-next": "15.5.15",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.5.0",
+    "typescript": "6.0.2",
+    "typescript-eslint": "8.58.2",
+    "framer-motion": "12.38.0",
+    "next": "15.5.15",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "exports": {
+    "./template": "./src/features/site-templates/catalog/zenpanda/meta.ts",
+    "./host": "./src/features/site-templates/catalog/zenpanda/host.tsx",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/features/site-templates",
+    ".tpl/assets",
+    ".tpl/template.json",
+    ".tpl/docs/LICENSE.md",
+    "public/templates/zenpanda"
+  ],
+  "peerDependencies": {
+    "framer-motion": "^12.38.0",
+    "next": "^15.3.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
